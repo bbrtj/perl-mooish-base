@@ -4,13 +4,17 @@ use v5.14;
 use warnings;
 use Import::Into;
 
-require Moo;
 require Mooish::AttributeBuilder;
 require Type::Tiny;
 require namespace::autoclean;
 
 use constant FLAVOUR => $ENV{MOOISH_BASE_FLAVOUR} // 'Moo';
 use constant ROLE_FLAVOUR => $ENV{MOOISH_BASE_ROLE_FLAVOUR} // (FLAVOUR . '::Role');
+
+BEGIN {
+	eval 'require ' . FLAVOUR or die $@;
+	eval 'require ' . ROLE_FLAVOUR or die $@;
+}
 
 sub import
 {
