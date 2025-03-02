@@ -1,6 +1,8 @@
 Revision history for Mooish-Base
 
 {{$NEXT}}
+
+0.002 - 2025-03-02
 	- Moose class will automatically be made immutable with Hook::AfterRuntime installed
 
 0.001 - 2025-02-21
