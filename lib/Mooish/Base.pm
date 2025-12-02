@@ -156,6 +156,14 @@ Currently, it will only cause L<Mooish::AttributeBuilder> to be imported with
 C<-standard> flag. If some other custom behavior prove undesirable in the
 future, it may be included as well.
 
+Please be aware that having a variable OO engine may not be good for all
+modules. Obvious example of where it is bad is the case where your code mixes
+in roles which were not written using Mooish::Base. If this ever becomes a
+pressing problem, a way to force flavour (regardless of environmental flags)
+may be added in the future, and it may be included as a part of C<-standard>
+flag behavior. If you expect your code to be sensitive to changes in the
+flavour environmental flag, avoid depending on this module in your module.
+
 =head1 SEE ALSO
 
 L<Moo>
