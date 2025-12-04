@@ -169,11 +169,12 @@ Currently, it will ensure that:
 =item
 
 L<Mooish::AttributeBuilder> will be imported with C<-standard> flag (no
-user-defined shortcuts).
+user-defined shortcuts). I<(in effect since version 1.000)>
 
 =item
 
 L<Moo> and L<Moo::Role> will be used regardless of the environment variables.
+I<(in effect since version 1.001)>
 
 =back
 
