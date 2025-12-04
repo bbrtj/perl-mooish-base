@@ -1,6 +1,8 @@
 Revision history for Mooish-Base
 
 {{$NEXT}}
+
+1.001 - 2025-12-04
 	- Changed -standard flag to always import Moo, regardless of the environment
 
 1.000 - 2025-12-02
