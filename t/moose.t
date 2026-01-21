@@ -9,7 +9,7 @@ BEGIN {
 	my $imported_ok = eval { require Mooish::Base; 1 };
 
 	skip_all 'This test requires Moose and Hook::AfterRuntime'
-		unless $imported_ok && Mooish::Base->HAS_HOOK_AFTERRUNTIME;
+		unless $imported_ok && Mooish::Base->EXTRA_MODULES_AVAILABLE->{'Hook::AfterRuntime'};
 }
 
 {
