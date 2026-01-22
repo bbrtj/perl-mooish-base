@@ -43,6 +43,9 @@ jobs:
     - name: Install dependencies
       run: |
         cpanm --installdeps --notest .
+    - name: Install extra modules
+      run: |
+        cpanm Hook::AfterRuntime MooseX::XSConstructor MooseX::XSAccessor MooX::XSConstructor MooX::TypeTiny
     - name: Show Errors on Windows
       if:  ${{ failure() && startsWith( matrix.runner, 'windows-') }}
       run: |
