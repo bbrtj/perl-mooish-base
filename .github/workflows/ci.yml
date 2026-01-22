@@ -15,8 +15,6 @@ jobs:
         exclude:
           - runner: windows-latest
             perl: '5.10'
-          - runner: windows-latest
-            perl: '5.40'
 
     runs-on: ${{matrix.runner}}
     name: OS ${{matrix.runner}} Perl ${{matrix.perl}}
@@ -44,6 +42,7 @@ jobs:
       run: |
         cpanm --installdeps --notest .
     - name: Install extra modules
+      if:  ${{ !startsWith(matrix.runner, 'windows-') && !startsWith(matrix.perl, '5.10') }}
       run: |
         cpanm Hook::AfterRuntime MooseX::XSConstructor MooseX::XSAccessor MooX::XSConstructor MooX::TypeTiny
     - name: Show Errors on Windows
