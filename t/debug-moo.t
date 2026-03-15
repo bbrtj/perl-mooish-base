@@ -52,7 +52,7 @@ is $Mooish::Base::DEBUG, {
 		standard => F(),
 		extra_modules => {
 			'MooX::TypeTiny' => bool(Mooish::Base->EXTRA_MODULES_AVAILABLE->{'MooX::TypeTiny'}),
-			'MooX::XSConstructor' => bool(Mooish::Base->EXTRA_MODULES_AVAILABLE->{'MooX::XSConstructor'}),
+			'MooX::XSConstructor' => F(),
 			'MooseX::XSConstructor' => F(),
 			'MooseX::XSAccessor' => F(),
 			'Hook::AfterRuntime' => F(),
