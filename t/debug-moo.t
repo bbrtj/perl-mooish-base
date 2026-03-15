@@ -5,6 +5,7 @@ use Test2::V0;
 ################################################################################
 
 BEGIN {
+	$ENV{MOOISH_BASE_EXTRA_MODULES} = 'MooX::XSConstructor;MooX::TypeTiny';
 	require Mooish::Base;
 	$Mooish::Base::DEBUG = {};
 }
@@ -52,7 +53,7 @@ is $Mooish::Base::DEBUG, {
 		standard => F(),
 		extra_modules => {
 			'MooX::TypeTiny' => bool(Mooish::Base->EXTRA_MODULES_AVAILABLE->{'MooX::TypeTiny'}),
-			'MooX::XSConstructor' => F(),
+			'MooX::XSConstructor' => bool(Mooish::Base->EXTRA_MODULES_AVAILABLE->{'MooX::XSConstructor'}),
 			'MooseX::XSConstructor' => F(),
 			'MooseX::XSAccessor' => F(),
 			'Hook::AfterRuntime' => F(),
