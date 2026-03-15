@@ -1,6 +1,8 @@
 Revision history for Mooish-Base
 
 {{$NEXT}}
+
+1.004 - 2026-03-15
 	- XSConstructor extra modules are no longer used by default when available
 
 1.003 - 2026-01-22
